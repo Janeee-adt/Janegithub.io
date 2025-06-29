@@ -12,133 +12,58 @@
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    .glass {
+      backdrop-filter: blur(8px) brightness(100%);
+      background-color: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: inset 4px 4px 10px 4px rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 
 <body id="body" style="font-family: 'Press Start 2P', cursive; padding-top: 100px;">
-  <div class="container-fluid minecraft-navbar shadow fixed-top" data-bs-theme="dark">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="py-4 d-flex flex-wrap justify-content-between align-items-center">
-            <div class="h4" style="display: inline-block; margin-right: 10px; font-weight: bold;">
-              MY WORLD
-            </div>
-            <a href="#home" class="btn-hover text-center flex-grow-1"
-              style="padding: 10px 20px; font-weight: bold; display: inline-block; font-family: 'Press Start 2P', cursive; margin: 0 5px; text-decoration:none; color:inherit; border-radius: 4px;">
+  <nav class="navbar navbar-expand-md fixed-top shadow" style="background-color: #006912;">
+    <div class="container-fluid mt-2 px-5 py-3 d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center" style="height: 60px; overflow: hidden;">
+        <div class="h4" style="display: inline-block; margin-right: 10px; color: #ffffff; font-weight: bold;">MY WORLD
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav d-flex align-items-md-center" style="font-family: 'Press Start 2P', cursive;">
+          <li class="nav-item">
+            <a href="" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color: #FFFFFF;">
               Home
             </a>
-
-            <a href="#activities" class="btn-hover text-center flex-grow-1"
-              style="padding: 10px 20px; font-weight: bold; display: inline-block; font-family: 'Press Start 2P', cursive; margin: 0 5px; text-decoration:none; color:inherit; border-radius: 4px;">
+          </li>
+          <li class="nav-item">
+            <a href="activities.html" class="nav-link fw-bold text-uppercase mt-2 mx-2 px-md-3 px-2 py-md-2 py-1"
+              style="color: #FFFFFF;">
               Activities
             </a>
-
-            <a href="#acknowledgement" class="btn-hover text-center flex-grow-1"
-              style="padding: 10px 20px; font-weight: bold; display: inline-block; font-family: 'Press Start 2P', cursive; margin: 0 5px; text-decoration:none; color:inherit; border-radius: 4px;">
-              Acknowledge
-            </a>
-            <div class="d-flex align-items-center ms-3">
-              <button id="colorBtn" onclick="changeMode()" class="btn btn-light" style="padding: 5px 10px;">
-                <img src="./img/moon.png" alt="Dark Mode" style="height: 24px; width: 24px;">
-              </button>
-            </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-  </div>
-  </div>
-  </div>
-
-
-  <section id="home"
-    style="min-height: 100vh; padding-top: 80px; position: relative; font-family: 'Press Start 2P', cursive;">
-    <div class="container-fluid min-vh-100  d-flex justify-content-center align-items-center position-relative"
-      style="height: 100%;">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-auto">
-            <img src="./img/indexbg.png" alt="Minecraft Cube" class="img-fluid"
-              style="image-rendering: pixelated; max-width: 100%; height: auto;">
-
-            <button id="showProfileBtn" class="btn btn-success"
-              style="position: fixed; top: 45%; left: 30px; transform: translateY(-50%); font-family: 'Press Start 2P', cursive; font-size: 10px; z-index: 1030;"
-              type="button" data-bs-toggle="collapse" data-bs-target="#profileCollapse" aria-expanded="false"
-              aria-controls="profileCollapse">
-              Show Profile
-            </button>
-
-            <div id="profileCollapse" class="collapse position-absolute" style="left: 20px; bottom: 20px; z-index: 2;">
-              <div class="d-flex" style="gap: 0;">
-                <img src="./img/mypic.png" alt="Your Photo"
-                  style="width: 200px; border-radius: 12px; image-rendering: pixelated; margin: 0; transform: none;">
-                <div
-                  style="background-color: #214d33; color: white; padding: 30px 40px; font-size: 14px; font-family: 'Press Start 2P', cursive; line-height: 1.6; text-align: left; border-radius: 50% / 60%; margin: 0; width: 220px; height: 140px; display: flex; flex-direction: column; justify-content: center; box-shadow: 10px 10px 20px rgba(0,0,0,0.2);">
-                  Jane<br>Angelou D.<br>Tolentino<br>World
-                </div>
-              </div>
-            </div>
-  </section>
-
-  <section id="activities"
-    style="min-height: 100vh; padding: 180px 20px 100px 20px; font-family: 'Press Start 2P', cursive;">
+  </nav>
+  <section id="home" class="d-flex justify-content-center align-items-center"
+    style="min-height: 100vh; position: relative; font-family: 'Press Start 2P', cursive; overflow: hidden; padding: 0; margin: 0;">
+    <img src="./img/indexbg.webp" alt="Minecraft Cube"
+      style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; object-fit: cover; image-rendering: pixelated; z-index: -1;">
     <div class="container">
-      <h2 class="text-center mb-5">Activities</h2>
-      <div class="row g-4 justify-content-center">
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow" style="border: 4px; max-width: 280px; margin: auto;">
-            <img src="./img/A04.jpg" class="card-img-top" alt="Activity 1"
-              style="image-rendering: pixelated; height: 160px; width: 100%; object-fit: cover;">
-            <div class="card-body">
-              <h5 class="card-title">A04</h5>
-              <a href="./A04/index.html" target="_blank" class="btn btn-success mt-3"
-                style="font-size: 12px; font-family: 'Press Start 2P', cursive;">Visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow" style="border: 4px; max-width: 280px; margin: auto;">
-            <img src="./img/h2.webp" class="card-img-top" alt="Activity 2"
-              style="image-rendering: pixelated; height: 160px; width: 100%; object-fit: cover;">
-            <div class="card-body">
-              <h5 class="card-title">A05</h5>
-              <a href="./A05/index.html" target="_blank" class="btn btn-success mt-3"
-                style="font-size: 12px; font-family: 'Press Start 2P', cursive;">Visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow" style="border: 4px; max-width: 280px; margin: auto;">
-            <img src="./img/A06.jpg" class="card-img-top" alt="Activity 3"
-              style="image-rendering: pixelated; height: 160px; width: 100%; object-fit: cover;">
-            <div class="card-body">
-              <h5 class="card-title">A06</h5>
-              <a href="./A06/index.html" target="_blank" class="btn btn-success mt-3"
-                style="font-size: 12px; font-family: 'Press Start 2P', cursive;">Visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow" style="border: 4px; max-width: 280px; margin: auto;">
-            <img src="./img/A07.jpg" class="card-img-top" alt="Activity 4"
-              style="image-rendering: pixelated; height: 160px; width: 100%; object-fit: cover;">
-            <div class="card-body">
-              <h5 class="card-title">A07</h5>
-              <a href="./A07/index.html" target="_blank" class="btn btn-success mt-3"
-                style="font-size: 12px; font-family: 'Press Start 2P', cursive;">Visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card h-100 shadow" style="border: 4px; max-width: 280px; margin: auto;">
-            <img src="./img/A08.jpg" class="card-img-top" alt="Activity 5"
-              style="image-rendering: pixelated; height: 160px; width: 100%; object-fit: cover;">
-            <div class="card-body">
-              <h5 class="card-title">A08</h5>
-              <a href="./A08/index.html" target="_blank" class="btn btn-success mt-3"
-                style="font-size: 12px; font-family: 'Press Start 2P', cursive;">Visit</a>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="card shadow glass p-4 text-center" style="border-radius: 20px;">
+            <img src="./img/mypic.png" alt="Your Photo"
+              style="width: 180px; height: 180px; border-radius: 50%; image-rendering: pixelated; object-fit: cover; margin: 0 auto 20px auto; box-shadow: 5px 5px 10px rgba(0,0,0,0.2);">
+            <div
+              style="color: white; padding: 20px 25px; font-size: 12px; font-family: 'Press Start 2P', cursive; line-height: 1.6; text-align: center; border-radius: 12px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2);">
+              Jane Angelou D. Tolentino<br>Student
             </div>
           </div>
         </div>
@@ -146,91 +71,9 @@
     </div>
   </section>
 
-  <section id="acknowledgement"
-    style="min-height: 100vh; padding: 180px 20px 100px 20px; font-family: 'Press Start 2P', cursive;">
-    <h2>Acknowledge</h2>
-    <p>This project uses Minecraft™ themes inspired by the game created by Mojang Studios. All Minecraft content is ©
-      Mojang Studios.
-    </p>
-  </section>
-
-  <script>
-    var mode = "light";
-    function changeMode() {
-      var body = document.getElementById("body");
-      var colorBtn = document.getElementById("colorBtn");
-      var navbar = document.querySelector(".minecraft-navbar");
-      var cards = document.querySelectorAll(".card");
-      mode = mode == "light" ? "dark" : "light";
-      
-      var btnClass = mode == "dark" ? "btn-dark" : "btn-light";
-      colorBtn.classList.remove("btn-light", "btn-dark");
-      colorBtn.classList.add(btnClass);
-      
-      var iconSrc = mode == "light" ? "./img/moon.png" : "./img/sun.png";
-      var altText = mode == "light" ? "Dark Mode" : "Light Mode";
-      colorBtn.innerHTML = '<img src="' + iconSrc + '" alt="' + altText + '" style="height: 24px; width: 24px;">';
-      body.setAttribute("data-bs-theme", mode);
-
-      if (mode == "light") {
-        navbar.style.backgroundColor = "#ffffff";
-        document.getElementById('activities').style.backgroundColor = "#f0f0f0";
-        document.getElementById('activities').style.color = "#222";
-        document.getElementById('acknowledgement').style.backgroundColor = "#d9d9d9";
-        document.getElementById('acknowledgement').style.color = "#222";
-        
-        cards.forEach(card => {
-          card.style.backgroundColor = "#f8f9fa";
-          card.style.color = "#222";
-          card.style.borderColor = "#ccc";
-        });
-
-      } else {
-        navbar.style.backgroundColor = "#212529";
-
-        document.getElementById('activities').style.backgroundColor = "#222";
-        document.getElementById('activities').style.color = "white";
-        document.getElementById('acknowledgement').style.backgroundColor = "#333";
-        document.getElementById('acknowledgement').style.color = "white";
-
-        cards.forEach(card => {
-          card.style.backgroundColor = "#2e2e2e";
-          card.style.color = "white";
-          card.style.borderColor = "#444";
-        });
-      }
-    }
-
-    const showProfileBtn = document.getElementById('showProfileBtn');
-    const profileCollapse = document.getElementById('profileCollapse');
-    const activitiesSection = document.getElementById('activities');
-    const acknowledgementSection = document.getElementById('acknowledgement');
-
-    window.addEventListener('scroll', () => {
-      const activitiesTop = activitiesSection.getBoundingClientRect().top;
-      const acknowledgementTop = acknowledgementSection.getBoundingClientRect().top;
-
-      if (activitiesTop <= window.innerHeight && activitiesTop >= 0 ||
-        acknowledgementTop <= window.innerHeight && acknowledgementTop >= 0) {
-        showProfileBtn.style.display = 'none';
-      } else {
-        showProfileBtn.style.display = 'block';
-      }
-    });
-
-    profileCollapse.addEventListener('shown.bs.collapse', () => {
-      showProfileBtn.textContent = "Hide Profile";
-    });
-
-    profileCollapse.addEventListener('hidden.bs.collapse', () => {
-      showProfileBtn.textContent = "Show Profile";
-    });
-  </script>
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
     </script>
-
 </body>
 
 </html>
